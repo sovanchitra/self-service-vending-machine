@@ -11,7 +11,7 @@ class Slot extends Model
     | GLOBAL VARIABLES
     |--------------------------------------------------------------------------
     */
-    protected $fillable = ['machine_id', 'category', 'point'];
+    protected $fillable = ['machine_id', 'category', 'point', 'status'];
 
     protected $casts = [
         'category' => 'string',

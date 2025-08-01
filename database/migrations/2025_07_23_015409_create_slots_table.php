@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('machine_id')->constrained('machines')->onDelete('cascade');
             $table->string('category');
             $table->integer('point');
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }
