@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('machines', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('card_number')->unique();
-            $table->decimal('amount', 10, 2)->nullable();
+            $table->string('location');
             $table->string('status')->default('active'); // active, inactive
             $table->timestamps();
         });

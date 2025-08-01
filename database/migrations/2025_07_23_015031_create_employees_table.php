@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('classification_id');
-            $table->string('card_number')->unique();
-            $table->string('full_name');
+            $table->bigInteger('card_number')->unique()->nullable();
+            $table->string('first_name');
+            $table->string('last_name');
             $table->string('status')->default('active'); // active, inactive
             $table->timestamps();
         });
